@@ -1,0 +1,3 @@
+g++ main.cpp huffman.cpp mapasCaoticos.cpp AES.cpp LSB.cpp $(pkg-config --cflags --libs opencv4) -lssl -lcrypto -o run
+
+El anterior comando es para ejecutarlo en linux. Es pesado demora unos segundos más de la cuenta.
