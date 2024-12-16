@@ -1,0 +1,10 @@
+# Ignorar todos los archivos objeto
+*.o
+
+# Ignorar todos los archivos ejecutables (puedes usar un patrón si sabes la extensión específica, si es necesario)
+*.exe
+*.out
+*.bin
+
+# Ignorar ejecutables sin extensión (comunes en Linux)
+a.out
