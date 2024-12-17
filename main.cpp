@@ -3,7 +3,6 @@
 
 int main() {
     string texto = "Hola Mundo!";
-    //string texto = "El modernismo catalán fue un movimiento cultural que se dio en Cataluña entre finales del siglo XIX y principios del xx, que se plasmó tanto en el arte (arquitectura, pintura, escultura y otras disciplinas artísticas) como en la literatura, la música y diversas manifestaciones culturales. Fue la culminación de un proceso de renacimiento cultural —la Renaixença— que supuso tanto la revalorización de la lengua catalana como un período de esplendor en todos los campos de la cultura —uno de los pocos en los que fue equiparable a cualquiera de los principales focos artísticos del momento en el continente europeo— acompañado por un período de bienestar económico patrocinado por el auge de la burguesía catalana y su gran desarrollo industrial, comercial y financiero. ";
     //cout<<texto<<endl;
     //cout<<endl;
 
@@ -62,35 +61,6 @@ int main() {
     string txtDeco = decodificar(desAES,raiz);
     cout<<"Mensaje Descifrado: "<<txtDeco<<endl;
 
-/*
-        EsteganografiaLSB estego;
-
-        // Ocultar datos en la imagen
-        estego.ocultarDatos(
-            "Images/Monkey.jpg",           // Ruta de la imagen original
-            resultadoCifrado.datos,          // Datos cifrados
-            resultadoCifrado.iv,             // Vector de inicialización
-            resultadoCifrado.tag,            // Tag de autenticación
-            "imagen_con_mensaje5.png"         // Ruta donde se guardará la imagen con el mensaje
-        );
-
-        std::cout << "\nMensaje ocultado exitosamente en la imagen." << std::endl;
-
-        // Extraer datos de la imagen
-        auto [ivExtraido, tagExtraido, datosCifradosExtraidos] = 
-            estego.extraerDatos("imagen_con_mensaje5.png");
-
-        std::cout << "Datos extraídos exitosamente." << std::endl;
-
-        // Verificar que los datos extraídos coinciden con los originales
-        bool datosCorrectos = 
-            (ivExtraido == resultadoCifrado.iv) &&
-            (tagExtraido == resultadoCifrado.tag) &&
-            (datosCifradosExtraidos == resultadoCifrado.datos);
-
-        std::cout << "Verificación de datos: " 
-                  << (datosCorrectos ? "Exitosa" : "Fallida") << std::endl;
-*/
     } catch (const std::exception& e) {
         std::cerr << "Error: " << e.what() << std::endl;
         return 1;
