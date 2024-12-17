@@ -45,8 +45,8 @@ double calculatePSNR(const Mat& original, const Mat& processed) {
 
 int main() {
     // Carga de las imágenes
-    Mat original = imread("Images/jellyfish.jpg");
-    Mat processed = imread("imagen_con_mensaje4.png");
+    Mat original = imread("Images/Monkey.jpg");
+    Mat processed = imread("Images/Monkey.jpg");
 
     if (original.empty() || processed.empty()) {
         cerr << "Error al cargar las imágenes. Verifica las rutas." << endl;

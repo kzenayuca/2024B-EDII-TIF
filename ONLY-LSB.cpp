@@ -44,7 +44,7 @@ void hideMessage(const std::string& imagePath, const std::string& outputImagePat
 
     // Guardar la imagen con el mensaje oculto
     cv::imwrite(outputImagePath, image);
-    std::cout << "Mensaje ocultado exitosamente en " << outputImagePath << std::endl;
+    //std::cout << "Mensaje ocultado exitosamente en " << outputImagePath << std::endl;
 }
 
 std::string extractMessage(const std::string& imagePath) {
@@ -93,10 +93,10 @@ std::string binaryToText(const std::string& binaryMessage) {
 }
 
 int main() {
-    std::string imagePath = "Images/jellyfish.jpg";
-    std::string outputImagePath = "imagen_modificada4.png";
+    std::string imagePath = "Images/Monkey.jpg";
+    std::string outputImagePath = "imagen_modificada2.png";
     //std::string message = "El modernismo catalán fue un movimiento cultural que se dio en Cataluña entre finales del siglo XIX y principios del xx, que se plasmó tanto en el arte (arquitectura, pintura, escultura y otras disciplinas artísticas) como en la literatura, la música y diversas manifestaciones culturales. Fue la culminación de un proceso de renacimiento cultural —la Renaixença— que supuso tanto la revalorización de la lengua catalana como un período de esplendor en todos los campos de la cultura —uno de los pocos en los que fue equiparable a cualquiera de los principales focos artísticos del momento en el continente europeo— acompañado por un período de bienestar económico patrocinado por el auge de la burguesía catalana y su gran desarrollo industrial, comercial y financiero.";
-    std::string message = "Prueba con un mensaje secreto";
+    std::string message = "Hola Mundo!";
     // Ocultar mensaje
     hideMessage(imagePath, outputImagePath, message);
 

@@ -50,7 +50,7 @@ private:
     static constexpr size_t TAMANO_IV = 16;
     static constexpr size_t TAMANO_TAG = 16;  // Para GCM
     
-    std::vector<unsigned char> llave;
+    std::vector<unsigned char> llave; //unsigned char le quita negatico
 
     void manejarError();
     public:
@@ -62,12 +62,17 @@ private:
         std::vector<unsigned char> datos;
     };
     ResultadoCifrado cifrar(const std::string& mensaje, const std::vector<double>& llaveEntrada);
-
+    std::string descifrarAES(const CifradorAES::ResultadoCifrado& resultado, const std::vector<double>& llaveEntrada);
 };
 
 std::string bytesAHex(const std::vector<unsigned char>& bytes);
 
+void hideMessage(const std::string& imagePath, const std::string& outputImagePath, const std::string& message);
+std::string extractMessage(const std::string& imagePath);
+std::string binaryToText(const std::string& binaryMessage);
 
+
+/*
 ///LSB
 class EsteganografiaLSB {
 private:
@@ -82,5 +87,5 @@ public:
     std::tuple<std::vector<unsigned char>, std::vector<unsigned char>, std::vector<unsigned char>> 
     extraerDatos(const std::string& rutaImagen);
 };
-
+*/
 #endif
